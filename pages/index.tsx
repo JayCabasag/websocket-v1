@@ -20,7 +20,7 @@ export default function Home() {
   const hasError = error !== ''
 
   useEffect(() => {
-    const socket = io('http://localhost:3001')
+    const socket = io('https://web-socket-v1-server.vercel.app/')
     socket.on('users', data => {
       setUsers(data);
     })
@@ -45,7 +45,7 @@ export default function Home() {
     if (message === '') {
       return setError('Message cannot be empty.')
     }
-    const socket = io('http://localhost:3001')
+    const socket = io('https://web-socket-v1-server.vercel.app/')
     socket.emit('send-group-message', {id: null, message: message})
     if (messageInputRef.current) {
       messageInputRef.current.value = ''
@@ -54,7 +54,7 @@ export default function Home() {
   }
 
   const handleClearMessages = () => {
-    const socket = io('http://localhost:3001')
+    const socket = io('https://web-socket-v1-server.vercel.app/')
     socket.emit('clear-messages')
   }
 
