@@ -1,0 +1,10 @@
+.send-message-form {
+  padding: 10pt;
+  display: flex;
+  flex-direction: column;
+  gap: 5pt;
+}
+
+.send-message-form input, button {
+  padding: 5pt;
+}
