@@ -45,7 +45,7 @@ export default function Home() {
     if (message === '') {
       return setError('Message cannot be empty.')
     }
-    const socket = io('https://web-socket-v1-server.vercel.app/')
+    const socket = io('https://web-socker-server.adaptable.app/')
     socket.emit('send-group-message', {id: null, message: message})
     if (messageInputRef.current) {
       messageInputRef.current.value = ''
@@ -54,7 +54,7 @@ export default function Home() {
   }
 
   const handleClearMessages = () => {
-    const socket = io('https://web-socket-v1-server.vercel.app/')
+    const socket = io('https://web-socker-server.adaptable.app/')
     socket.emit('clear-messages')
   }
 
