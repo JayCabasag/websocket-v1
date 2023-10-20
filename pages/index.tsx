@@ -74,7 +74,7 @@ export default function Home() {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'space-between'}}>
-            <h3>Mema na Omegle</h3>
+            <h3>Mema na Message</h3>
             <button onClick={handleClearMessages}>Clear Messages</button>
           </div>
           {messages.map((message: Message, index: number) => {
