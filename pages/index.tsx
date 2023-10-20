@@ -20,7 +20,7 @@ export default function Home() {
   const hasError = error !== ''
 
   useEffect(() => {
-    const socket = io('https://web-socket-v1-server.vercel.app/')
+    const socket = io('https://web-socker-server.adaptable.app/')
     socket.on('users', data => {
       setUsers(data);
     })
